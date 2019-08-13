@@ -60,7 +60,7 @@ dfc %>% select(contains("learn")) %>% gather(col,name) %>% select(-col) %>% muta
 dfc %>% select(contains("work")) %>% gather(col,name) %>% select(-col) %>% mutate(name=str_trim(name)) %>% unique()
 dfc %>% select(contains("specialize")) %>% gather(col,name) %>% select(-col) %>% mutate(name=str_trim(name)) %>% unique()
 dfc %>% select(contains("role")) %>% gather(col,name) %>% select(-col) %>% mutate(name=str_trim(name)) %>% unique()
-
+dfc %>% select(contains("containers")) %>% gather(col,name) %>% select(-col) %>% mutate(name=str_trim(name)) %>% unique()
 
 #elongate data to clean duplicates
 dfc2 <- dfc %>% 
@@ -71,7 +71,7 @@ dfc2 <- dfc %>%
   mutate(
     name=str_replace(name,"^che","eclipse che"),
     name=str_replace(name,"interlj","intellij"),
-    name=str_replace(name,"microservices","microservices"),
+    name=str_replace(name,"micro services","microservices"),
     name=str_replace(name,"container orch$","container orchestration"),
     name=str_replace(name,"server less (all)","serverless"),
     name=str_replace(name,"services mesh","service mesh"),
@@ -79,9 +79,14 @@ dfc2 <- dfc %>%
     name=str_replace(name,"and","&"),
     name=str_replace(name,"retail$","retail & services"),
     name=str_replace(name,"backend","back end"),
-    name=str_replace(name,"Sr mgr","senior manager"),
+    name=str_replace(name,"sr mgr","manager"),
+    name=str_replace(name,"development manager","manager"),
     name=str_replace(name,"mid-level$","mid-level developer"),
-    name=str_replace(name,"senior$","senior developer")
+    name=str_replace(name,"senior$","senior developer"),
+    name=str_replace(name,"manager (senior)","manager"),
+    name=str_replace(name,"None","none"),
+    name=str_replace(name,"51- 75","51-75"),
+    name=str_replace(name,"51-76","51-75"),
     
   ) %>%
   filter(name!="") %>%
@@ -108,6 +113,7 @@ df_long <- dfc2 %>%
          category = gsub("[[:digit:]]+", "", category)
   )
 
+#make data semi long with level 1 variables repeated
 df_long_spread <- dfc2 %>%
   gather(category,value,-id) %>%
   na.omit() %>%
@@ -116,15 +122,23 @@ df_long_spread <- dfc2 %>%
          ) %>%
   spread(category,value) 
 
+
+
 #add in just one role as role1
-df_role1 <- dfc %>% select(id,role1)
-df_long_spread <- df_long_spread %>% select(-role) %>% inner_join(df_role1)
-                                                
-  
+df_role1 <- dfc2 %>% select(id,role1)
+df_cont <- dfc %>% select(id,containers)
+df_long_spread <- df_long_spread %>% 
+  select(-role) %>% 
+  inner_join(df_role1) %>% 
+  rename(role=role1) %>%
+  inner_join(df_cont)
+
+#write data for app                             
+write_csv(df_long_spread,"/Users/carlpearson/Documents/r_github/string_board_data/stringboard_dev_persona/string_data2.csv")
 
 #df_long %>% select
   
-#dataviz
+#dataviz testing
 
 #i want to learn based on inudstry or specialization
 df_long_spread %>% group_by(learn,specialize) %>% count() %>% na.omit() %>%
@@ -134,24 +148,26 @@ df_long_spread %>% group_by(learn,specialize) %>% count() %>% na.omit() %>%
   scale_y_continuous(breaks=c(1:10)) +
   coord_flip() +
   ggthemes::theme_tufte(base_family="sans") +
-  labs(title="`I want to learn` by Specialization Groups",subtitle = "Bar clusters not mutually exclusive in data",y="Count")
+  labs(title="\"I want to learn\" by Specialization Groups",subtitle = "Bar clusters not mutually exclusive in data",y="Count")
 
+df_long_spread %>% group_by(learn,specialize,role) %>% count() %>% na.omit() %>%
+  ggplot(aes(x=learn,fill=role,y=n)) +
+  geom_bar(stat="identity") +
+  facet_wrap(~specialize,ncol=1) +
+  scale_y_continuous(breaks=c(1:10)) +
+  coord_flip() +
+  ggthemes::theme_tufte(base_family="sans") +
+  labs(title="\"I want to learn\" by Specialization Groups",subtitle = "Bar clusters not mutually exclusive in data",y="Count")
 
+df_long_spread %>% group_by(learn,specialize,work) %>% count() %>% na.omit() %>%
+  ggplot(aes(x=learn,fill=work,y=n)) +
+  geom_bar(stat="identity") +
+  facet_wrap(~specialize,ncol=1) +
+  scale_y_continuous(breaks=c(1:10)) +
+  coord_flip() +
+  ggthemes::theme_tufte(base_family="sans") +
+  labs(title="\"I want to learn\" by Specialization Groups",subtitle = "Bar clusters not mutually exclusive in data",y="Count")
 
-df_long_semi <- df_long %>%
-  group_by(id) %>%
-  filter(category=="specialize") %>%
-  select(-category) %>%
-  mutate(response_number=1) %>%
-  spread(value,response_number)
-
-df_long_semi <- df_long_spread %>% 
-  select(-specialize) %>% 
-  left_join(df_long_semi)
-  
-
-df_long_semi %>%
-  ggplot(aes(x=learn,fill=))
 
 
 
