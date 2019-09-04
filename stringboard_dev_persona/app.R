@@ -1,3 +1,5 @@
+#working app
+
 #
 # This is a Shiny web application. You can run the application by clicking
 # the 'Run App' button above.
@@ -11,23 +13,27 @@ library(shiny)
 library(ggplot2)
 library(readr)
 library(dplyr)
+library(plotly)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
-
+    
+    
+  
+    
     # Application title
     titlePanel("String Board Data Explorer"),
-
+    
     # Sidebar with inputs for variables
     sidebarLayout(
         sidebarPanel(
-            
+           
             h3("Build your graph:"),
             
             #select variable that builds main plot bars
             selectInput(
                 inputId = "target_variable",
-                label= "Choose variable to graph in bars",
+                label= "Main variable to graph in bars",
                 choices = c(
                     "My code editor is" = "code.editor",
                     "I want to learn" = "learn" ,
@@ -36,213 +42,53 @@ ui <- fluidPage(
                     "My role is" = "role",
                     "I use containers ___ % of the time" = "containers"
                 ),
-                selected = "learn"
+                selected = "code.editor"
             ),
-            #select variable that builds facets in ggplot
-            selectInput(
-                inputId = "second_variable",
-                label= "Chose faceting variable (sub-graphs)",
-                choices = c(
-                    "None"="none",
-                    "My code editor is" = "code.editor",
-                    "I want to learn" = "learn" ,
-                    "I specialize in" = "specialize",
-                    "I work in" = "work",
-                    "My role is" = "role",
-                    "I use containers ___ % of the time" = "containers"
-                ),
-                selected = "none"
-            ),
+           
             #select how to color in bars
             selectInput(
                 inputId = "individual_color",
-                label= "Choose bar fill variable (sub-bars)",
+                label= "Bar fill variable (sub-bars)",
                 choices = c(
-                     "None" = "none",
-                     "My code editor is" = "code.editor",
-                     "I want to learn" = "learn" ,
-                     "I specialize in" = "specialize",
-                     "I work in" = "work",
-                     "My role is" = "role",
-                     "I use containers ___ % of the time" = "containers"
+                    "None" = "none",
+                    "My code editor is" = "code.editor",
+                    "I want to learn" = "learn" ,
+                    "I specialize in" = "specialize",
+                    "I work in" = "work",
+                    "My role is" = "role",
+                    "I use containers ___ % of the time" = "containers",
+                    "Location where data was gathered" = "place"
                 ),
                 selected = "none"
             ),
-            #conditional panels below for selecting each factor in a variable to hide or show
-            conditionalPanel(
-                condition = "input.individual_color == 'role' ",
-                            checkboxGroupInput(inputId = "input_choice_role",
-                                        label= "Choose the roles",
-                                        choices = c(
-                                            "architect",
-                                            "manager",
-                                            "lead developer",
-                                            "senior developer",
-                                            "mid-level developer",
-                                            "junior developer"
-                                        ),
-                                        selected =  c(
-                                            "architect",
-                                            "manager",
-                                            "lead developer",
-                                            "senior developer",
-                                            "mid-level developer",
-                                            "junior developer"
-                                        )
-                            )
-                     ),
-            conditionalPanel(
-                condition = "input.individual_color == 'code.editor' ",
-                checkboxGroupInput(inputId = "input_choice_code.editor",
-                                   label= "Choose the code editors",
-                                   choices = c(
-                                       "vc code",
-                                       "eclipse",
-                                       "eclipse che",
-                                       "intellij",
-                                       "atom",
-                                       "emacs",
-                                       "other"
-                                   ),
-                                   selected =  c(
-                                       "vc code",
-                                       "eclipse",
-                                       "eclipse che",
-                                       "intellij",
-                                       "atom",
-                                       "emacs",
-                                       "other"
-                                   )
-                )
-            ),
-            conditionalPanel(
-                condition = "input.individual_color == 'learn' ",
-                checkboxGroupInput(inputId = "input_choice_learn",
-                                   label= "Choose the learning area",
-                                   choices = c(
-                                       "service mesh"   ,
-                                       "serverless" ,
-                                       "containerization",
-                                       "devops",
-                                       "container orchestration",
-                                       "microservices"
-                                   ),
-                                   selected =  c(
-                                       "service mesh"   ,
-                                       "serverless" ,
-                                       "containerization",
-                                       "devops",
-                                       "container orchestration",
-                                       "microservices"
-                                   )
-                )
-            ),
-            conditionalPanel(
-                condition = "input.individual_color == 'specialize' ",
-                checkboxGroupInput(inputId = "input_choice_specialize",
-                                   label= "Choose the specialization",
-                                   choices = c(
-                                       "devops" ,
-                                       "full stack",
-                                       "back end" ,
-                                       "front end",
-                                       "mobile",
-                                       "security" 
-                                   ),
-                                   selected =  c(
-                                       "devops" ,
-                                       "full stack",
-                                       "back end" ,
-                                       "front end",
-                                       "mobile",
-                                       "security" 
-                                   )
-                )
-            ),
-            conditionalPanel(
-                condition = "input.individual_color == 'work' ",
-                checkboxGroupInput(inputId = "input_choice_work",
-                                   label= "Choose the work industry",
-                                   choices = c(
-                                       "science & tech" ,
-                                       "manufacturing",
-                                       "government",
-                                       "retail & services",
-                                       "finance" ,
-                                       "security"  ,
-                                       "other"
-                                   ),
-                                   selected =  c(
-                                       "science & tech" ,
-                                       "manufacturing",
-                                       "government",
-                                       "retail & services",
-                                       "finance" ,
-                                       "security"  ,
-                                       "other"
-                                   )
-                )
-            ),
-            conditionalPanel(
-                condition = "input.individual_color=='containers'",
-                                    checkboxGroupInput(inputId = "input_choice_conatiners",
-                                                       label= "Choose how much they work with containers (%)",
-                                                       choices = c(
-                                                           "None"="none",
-                                                           "1-25",
-                                                           "26-50",
-                                                           "51-75",
-                                                           "76-100"
-                                                           
-                                                       ),
-                                                       selected =  c(
-                                                           "None"=="none",
-                                                           "1-25",
-                                                           "26-50",
-                                                           "51-75",
-                                                           "76-100"
-                                                          
-                                                       )
-                )
-            ),
+    
+           
+            # #filter by location
+            # selectInput(
+            #     inputId = "place_in",
+            #     label= "Data sources",
+            #     choices = c(
+            #         "Combined" = "all",
+            #         "Separated" = "split"
+            #     ),
+            #     selected = "All"
+            # ),
             #optional sizing 
             hr(),
-            checkboxInput(
-                inputId = "viz",
-                label= "More visual options",
-                value=F
+            h4("About these data:"),
+            p("These data were collected at Red Hat Summit 2019 and DevConf.US 2019. Developers filled out information about their work and tools on a string board."
+            
+              
             ),
-            #change text size
-            conditionalPanel(
-                condition = "output.vizout",
-                numericInput(
-                    inputId = "textsize",
-                    label = "Choose text size",
-                    value=16,
-                    min=8,
-                    max=24
-                    
-                    
-                ),
-                #scale plot
-                numericInput(
-                    inputId = "plotwidth",
-                    label = "Choose plot width scaling",
-                    value=800,
-                    min=400,
-                    max=2000,
-                    step=10
-                    
-                    
-                )
-                    
-                                 
-            )
-            ),
-
+            hr(),
+            h6("Found a bug? @carljpearson on twitter or github")
+        ),
+        
         # Show the plot
         mainPanel(
-           plotOutput("Plot")
+           
+            plotlyOutput("Plot")
+            
         )
     )
 )
@@ -253,8 +99,8 @@ server <- function(input, output) {
     #read data
     data <- isolate({
         
-        data <- read_csv("/Users/carlpearson/Documents/r_github/string_board_data/stringboard_dev_persona/string_data.csv",col_names = T)
-
+        data <- read_csv("string_data2.csv",col_names = T)
+        
         
     })
     
@@ -263,88 +109,107 @@ server <- function(input, output) {
         input$viz == TRUE
     })
     outputOptions(output, "vizout", suspendWhenHidden = FALSE)
- 
+    
     #main plot
     observe({
-    
-    output$Plot <- renderPlot({
-        df_long_spread <- data
         
         
         
-        if(input$individual_color=="none" & input$second_variable=="none") { #show with only main variable picked
-         p <- df_long_spread %>% 
-             group_by(!!rlang::sym(input$target_variable)) %>% 
-                count() %>%
-                na.omit() %>%
-                ggplot(aes(x=!!rlang::sym(input$target_variable),y=n,fill=!!rlang::sym(input$target_variable))) +
-                geom_bar(stat="identity") +
-                coord_flip() +
-                ggthemes::theme_tufte(base_family="sans") + 
-                guides(fill=FALSE)
-        } else if(input$individual_color=="none" & input$second_variable!="none") { #show with only main variable and faceting variable picked
-            p <- df_long_spread %>% 
-                group_by(!!rlang::sym(input$target_variable),!!rlang::sym(input$second_variable)) %>% 
-                count() %>%
-                na.omit() %>%
-                ggplot(aes(x=!!rlang::sym(input$target_variable),y=n,fill=!!rlang::sym(input$target_variable))) +
-                geom_bar(stat="identity") +
-                facet_wrap(~get(input$second_variable),ncol=1)  +
-                # scale_y_continuous(breaks=c(1:10)) +
-                coord_flip() +
-                ggthemes::theme_tufte(base_family="sans") + 
-                guides(fill=FALSE)
+        output$Plot <- renderPlotly({
             
-        } else if(input$individual_color!="none" & input$second_variable=="none") { #show with only main variable and bar color variable picked
-            p <- df_long_spread %>% 
-                filter( if( input$individual_color == "role"){!!rlang::sym(input$individual_color) %in% input$input_choice_role
-                } else if( input$individual_color == "work"){!!rlang::sym(input$individual_color) %in% input$input_choice_work
-                } else if( input$individual_color == "learn"){!!rlang::sym(input$individual_color) %in% input$input_choice_learn
-                } else if( input$individual_color == "code.editor"){!!rlang::sym(input$individual_color) %in% input$input_choice_code.editor
-                } else if( input$individual_color == "specialize"){!!rlang::sym(input$individual_color) %in% input$input_choice_specialize
-                } else if( input$individual_color == "work"){!!rlang::sym(input$individual_color) %in% input$input_choice_work
-                } 
-                ) %>%
-                group_by(!!rlang::sym(input$target_variable),!!rlang::sym(input$individual_color)) %>% 
-                count() %>%
-                na.omit() %>%
-                ggplot(aes(x=!!rlang::sym(input$target_variable),y=n,fill=!!rlang::sym(input$individual_color))) +
-                geom_bar(stat="identity") +
-                #facet_wrap(~get(input$second_variable),ncol=1)  +
-                # scale_y_continuous(breaks=c(1:10)) +
-                coord_flip() +
-                ggthemes::theme_tufte(base_family="sans") 
-        } else { #show with all variables selected
-         p <- df_long_spread %>% 
-                filter( if( input$individual_color == "role"){!!rlang::sym(input$individual_color) %in% input$input_choice_role
-                    } else if( input$individual_color == "work"){!!rlang::sym(input$individual_color) %in% input$input_choice_work
-                    } else if( input$individual_color == "learn"){!!rlang::sym(input$individual_color) %in% input$input_choice_learn
-                    } else if( input$individual_color == "code.editor"){!!rlang::sym(input$individual_color) %in% input$input_choice_code.editor
-                    } else if( input$individual_color == "specialize"){!!rlang::sym(input$individual_color) %in% input$input_choice_specialize
-                    } else if( input$individual_color == "work"){!!rlang::sym(input$individual_color) %in% input$input_choice_work
-                    } 
+           if(input$individual_color == input$target_variable){
+               
+               t <- list(
+                   family = "sans serif",
+                   size = 12,
+                   color = 'red')
+               
+               
+               plotly_empty() %>%
+                   layout(title="Please do not choose the same variable twice when building your graph",font=t)
+           } else
+           {
+            
+            df_long_spread <- data 
+            
+            
+            if(input$individual_color=="none"){
+                p_data <- df_long_spread %>% 
+                    group_by(!!rlang::sym(input$target_variable)) %>% 
+                    count() %>%
+                    na.omit()%>%
+                    rename(
+                        target=!!rlang::sym(input$target_variable))
+            } else if(input$individual_color!="none"){
+             p_data <- df_long_spread %>% 
+                 group_by(!!rlang::sym(input$target_variable),
+                          !!rlang::sym(input$individual_color)) %>% 
+                 count() %>%
+                na.omit()%>%
+                rename(
+                        target=!!rlang::sym(input$target_variable),
+                       second=!!rlang::sym(input$individual_color))
+            }
+            
+            
+            
+            #axis names made prettier
+            var_name = case_when(
+                input$target_variable == "code.editor" ~ "My code editor is" ,
+                input$target_variable == "learn"     ~ "I want to learn",
+                input$target_variable == "specialize" ~"I specialize in",
+                input$target_variable == "work" ~ "I work in",
+                input$target_variable == "role" ~ "My role is",
+                input$target_variable == "containers" ~ "I use containers ___ % of the time",
+                input$target_variable == "place" ~ "Location where data was gathered from"
+                
+            )
+            
+                
+                
+            if(input$individual_color=="none"){
+                p <- p_data %>% 
+                    plot_ly(
+                        x = ~target,
+                        y = ~n,
+                        color = ~target,
+                        type = "bar"
                     ) %>%
-               group_by(!!rlang::sym(input$target_variable),!!rlang::sym(input$second_variable),!!rlang::sym(input$individual_color)) %>% 
-               count() %>% 
-               na.omit() %>%
-               ggplot(aes(x=!!rlang::sym(input$target_variable),y=n, fill = !!rlang::sym(input$individual_color))) +
-               geom_bar(stat="identity") +
-               facet_wrap(~get(input$second_variable),ncol=1)  +
-               coord_flip() +
-               ggthemes::theme_tufte(base_family="sans") 
-             }
+                    layout(
+                        xaxis = list(title=var_name),
+                        yaxis = list(title="Count"),
+                        showlegend = FALSE)
+            } else if(input$individual_color=="place"){
+            p <- p_data %>% 
+                plot_ly(
+                x = ~target,
+                y = ~n,
+                color = ~second,
+                type = "bar"
+            ) %>%
+            layout(
+                xaxis = list(title=var_name),
+                yaxis = list(title="Count"),
+                barmode='group')
+            } else {
+                p <- p_data %>% 
+                    plot_ly(
+                        x = ~target,
+                        y = ~n,
+                        color = ~second,
+                        type = "bar"
+                    ) %>%
+                    layout(
+                        xaxis = list(title=var_name),
+                        yaxis = list(title="Count"),
+                        barmode='stack')
+            }
+            
         
-                #output plot
-             p +   theme(text = element_text(size=input$textsize)) + #scale text
-                 labs( #plot labels
-                     y="Count",
-                     caption="Data in bars are not mutually exclusive")
-            
-            
-            #change plot width scaling
-         },height = input$plotwidth)
-    
-    
+           }
+        })
+        
+        
     }) #end
     
     
@@ -354,3 +219,5 @@ server <- function(input, output) {
 
 # Run the application 
 shinyApp(ui = ui, server = server)
+
+

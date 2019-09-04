@@ -127,11 +127,13 @@ df_long_spread <- dfc2 %>%
 #add in just one role as role1
 df_role1 <- dfc2 %>% select(id,role1)
 df_cont <- dfc %>% select(id,containers)
+df_place <- dfc %>% select(id,place)
 df_long_spread <- df_long_spread %>% 
   select(-role) %>% 
   inner_join(df_role1) %>% 
   rename(role=role1) %>%
-  inner_join(df_cont)
+  inner_join(df_cont) %>%
+  inner_join(df_place)
 
 #write data for app                             
 write_csv(df_long_spread,"/Users/carlpearson/Documents/r_github/string_board_data/stringboard_dev_persona/string_data2.csv")
@@ -207,3 +209,27 @@ dfc2 <- dfc %>%
   ) %>%
   mutate_all(tolower) 
 
+
+#plotly
+library(plotly)
+data <- read_csv("/Users/carlpearson/Documents/r_github/string_board_data/stringboard_dev_persona/string_data2.csv",col_names = T)
+
+
+
+p <- plot_ly(data, x = ~, y = ~SF_Zoo, type = 'bar', name = 'SF Zoo') %>%
+  add_trace(y = ~LA_Zoo, name = 'LA Zoo') %>%
+  layout(yaxis = list(title = 'Count'), barmode = 'group')
+
+
+
+data %>%
+  group_by(role,containers,code.editor) %>%
+  count() %>%
+  na.omit() %>%
+  ggplot(aes(x=role,y=n)) +
+  geom_bar(aes(fill=code.editor),stat="identity",position="dodge") +
+  geom_bar(aes(fill=containers),stat="identity",position="stack") +
+  #facet_wrap(~get(input$second_variable),ncol=1)  +
+  # scale_y_continuous(breaks=c(1:10)) +
+  coord_flip() +
+  ggthemes::theme_tufte(base_family="sans") 

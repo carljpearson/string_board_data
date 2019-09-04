@@ -1,194 +1,343 @@
-id,response_number,code.editor,learn,specialize,work,role,containers
-1,1,vs code,service mesh,security,science & tech,manager,76-100
-1,2,NA,NA,devops,manufacturing,manager,76-100
-1,3,NA,NA,full stack,other,manager,76-100
-1,4,NA,NA,NA,NA,manager,76-100
-10,1,eclipse,containerization,security,government,architect,none
-10,2,vs code,NA,devops,NA,architect,none
-11,1,eclipse che,serverless,mobile,science & tech,architect,1-25
-11,2,intellij,service mesh,devops,government,architect,1-25
-12,1,eclipse,container orchestration,back end,other,architect,26-50
-12,2,NA,devops,NA,NA,architect,26-50
-12,3,NA,service mesh,NA,NA,architect,26-50
-12,4,NA,microservices,NA,NA,architect,26-50
-13,1,vs code,service mesh,back end,science & tech,architect,76-100
-14,1,atom,serverless,devops,science & tech,architect,76-100
-14,2,vs code,container orchestration,NA,NA,architect,76-100
-14,3,NA,devops,NA,NA,architect,76-100
-14,4,NA,microservices,NA,NA,architect,76-100
-14,5,NA,service mesh,NA,NA,architect,76-100
-15,1,vs code,service mesh,full stack,science & tech,architect,1-25
-15,2,eclipse,container orchestration,NA,NA,architect,1-25
-15,3,emacs,NA,NA,NA,architect,1-25
-16,1,eclipse,microservices,back end,retail & services,architect,1-25
-17,1,vs code,microservices,back end,retail & services,architect,1-25
-18,1,other,containerization,full stack,science & tech,mid-level developer,1-25
-18,2,NA,service mesh,NA,NA,mid-level developer,1-25
-19,1,other,service mesh,full stack,science & tech,architect,1-25
-19,2,NA,serverless,NA,NA,architect,1-25
-2,1,other,serverless,devops,other,senior developer,none
-2,2,NA,container orchestration,back end,NA,senior developer,none
-2,3,NA,devops,NA,NA,senior developer,none
-2,4,NA,microservices,NA,NA,senior developer,none
-2,5,NA,service mesh,NA,NA,senior developer,none
-20,1,other,containerization,devops,government,lead developer,none
-20,2,NA,service mesh,NA,NA,lead developer,none
-21,1,vs code,devops,back end,government,lead developer,none
-21,2,eclipse,NA,NA,NA,lead developer,none
-22,1,other,serverless,full stack,science & tech,architect,76-100
-22,2,NA,container orchestration,NA,NA,architect,76-100
-22,3,NA,devops,NA,NA,architect,76-100
-22,4,NA,microservices,NA,NA,architect,76-100
-22,5,NA,service mesh,NA,NA,architect,76-100
-23,1,vs code,serverless,back end,other,manager,26-50
-24,1,vs code,service mesh,devops,other,architect,76-100
-25,1,other,container orchestration,front end,manufacturing,architect,1-25
-25,2,vs code,devops,back end,NA,architect,1-25
-25,3,NA,microservices,full stack,NA,architect,1-25
-25,4,NA,NA,devops,NA,architect,1-25
-26,1,eclipse,microservices,full stack,government,architect,26-50
-27,1,vs code,devops,back end,manufacturing,senior developer,76-100
-28,1,eclipse,serverless,devops,finance,manager,26-50
-28,2,NA,container orchestration,NA,NA,manager,26-50
-29,1,other,containerization,full stack,government,junior developer,none
-3,1,other,service mesh,security,government,mid-level developer,51-75
-30,1,atom,service mesh,back end,government,architect,76-100
-31,1,eclipse,service mesh,full stack,government,manager,76-100
-31,2,NA,serverless,NA,NA,manager,76-100
-32,1,eclipse,microservices,full stack,finance,lead developer,26-50
-33,1,other,devops,back end,other,mid-level developer,none
-34,1,other,devops,full stack,science & tech,architect,76-100
-35,1,vs code,service mesh,back end,retail & services,manager,26-50
-36,1,vs code,service mesh,back end,other,architect,51- 75
-37,1,vs code,service mesh,back end,other,lead developer,51- 75
-38,1,other,devops,back end,science & tech,lead developer,none
-39,1,atom,service mesh,devops,science & tech,architect,76-100
-4,1,atom,containerization,devops,science & tech,mid-level developer,1-25
-40,1,vs code,container orchestration,front end,other,architect,none
-40,2,atom,containerization,NA,NA,architect,none
-41,1,other,serverless,devops,finance,junior developer,none
-41,2,vs code,service mesh,NA,NA,junior developer,none
-42,1,eclipse,container orchestration,full stack,finance,architect,26-50
-42,2,NA,containerization,NA,NA,architect,26-50
-42,3,NA,microservices,NA,NA,architect,26-50
-43,1,other,containerization,full stack,finance,mid-level developer,1-25
-44,1,other,service mesh,devops,other,senior developer,none
-44,2,NA,containerization,NA,NA,senior developer,none
-44,3,NA,devops,NA,NA,senior developer,none
-44,4,NA,container orchestration,NA,NA,senior developer,none
-44,5,NA,serverless,NA,NA,senior developer,none
-45,1,eclipse,containerization,full stack,other,manager,1-25
-46,1,vs code,serverless,full stack,retail & services,architect,none
-46,2,eclipse,NA,NA,NA,architect,none
-47,1,other,devops,full stack,other,mid-level developer,none
-48,1,vs code,service mesh,full stack,finance,architect,26-50
-48,2,NA,devops,NA,NA,architect,26-50
-48,3,NA,containerization,NA,NA,architect,26-50
-48,4,NA,container orchestration,NA,NA,architect,26-50
-48,5,NA,serverless,NA,NA,architect,26-50
-49,1,other,serverless,devops,other,mid-level developer,none
-49,2,NA,container orchestration,full stack,retail & services,mid-level developer,none
-49,3,NA,containerization,back end,manufacturing,mid-level developer,none
-49,4,NA,devops,front end,science & tech,mid-level developer,none
-49,5,NA,microservices,NA,security,mid-level developer,none
-5,1,other,service mesh,full stack,science & tech,mid-level developer,76-100
-50,1,intellij,container orchestration,full stack,science & tech,mid-level developer,1-25
-50,2,NA,microservices,NA,NA,mid-level developer,1-25
-51,1,emacs,service mesh,security,other,architect,none
-52,1,eclipse che,service mesh,full stack,government,architect,1-25
-53,1,other,container orchestration,back end,science & tech,lead developer,51-75
-53,2,NA,service mesh,security,NA,lead developer,51-75
-54,1,other,service mesh,full stack,science & tech,lead developer,1-25
-55,1,other,container orchestration,devops,other,lead developer,1-25
-55,2,NA,containerization,NA,NA,lead developer,1-25
-56,1,other,devops,devops,other,architect,1-25
-56,2,atom,NA,full stack,finance,architect,1-25
-57,1,eclipse che,serverless,devops,finance,senior developer,76-100
-57,2,intellij,container orchestration,full stack,NA,senior developer,76-100
-57,3,NA,containerization,back end,NA,senior developer,76-100
-57,4,NA,microservices,front end,NA,senior developer,76-100
-58,1,intellij,microservices,full stack,science & tech,senior developer,76-100
-59,1,vs code,microservices,front end,science & tech,mid-level developer,51- 75
-6,1,other,devops,security,government,lead developer,1-25
-6,2,NA,NA,front end,NA,lead developer,1-25
-60,1,eclipse,container orchestration,full stack,science & tech,junior developer,76-100
-60,2,atom,containerization,devops,NA,junior developer,76-100
-60,3,NA,devops,NA,NA,junior developer,76-100
-60,4,NA,microservices,NA,NA,junior developer,76-100
-61,1,emacs,containerization,full stack,finance,architect,1-25
-61,2,NA,service mesh,devops,other,architect,1-25
-62,1,eclipse,serverless,full stack,science & tech,mid-level developer,1-25
-62,2,intellij,devops,NA,NA,mid-level developer,1-25
-62,3,NA,microservices,NA,NA,mid-level developer,1-25
-62,4,NA,service mesh,NA,NA,mid-level developer,1-25
-63,1,vs code,microservices,full stack,government,manager,1-25
-63,2,NA,serverless,devops,NA,manager,1-25
-63,3,NA,NA,security,NA,manager,1-25
-64,1,eclipse che,containerization,back end,science & tech,mid-level developer,1-25
-64,2,NA,service mesh,NA,NA,mid-level developer,1-25
-65,1,other,containerization,full stack,finance,architect,1-25
-66,1,eclipse,service mesh,full stack,science & tech,architect,1-25
-67,1,intellij,microservices,back end,finance,senior developer,1-25
-68,1,intellij,microservices,back end,finance,architect,76-100
-69,1,atom,microservices,full stack,science & tech,manager,76-100
-7,1,eclipse che,serverless,full stack,science & tech,lead developer,1-25
-70,1,intellij,devops,back end,other,mid-level developer,51-75
-71,1,eclipse,serverless,full stack,government,architect,51-75
-72,1,atom,service mesh,front end,manufacturing,manager,51-75
-73,1,other,devops,devops,other,architect,76-100
-74,1,eclipse che,serverless,full stack,other,architect,76-100
-75,1,other,serverless,full stack,science & tech,manager,76-100
-75,2,intellij,service mesh,NA,NA,manager,76-100
-75,3,eclipse,microservices,NA,NA,manager,76-100
-76,1,vs code,serverless,full stack,science & tech,architect,51-75
-76,2,NA,microservices,NA,NA,architect,51-75
-76,3,NA,service mesh,NA,NA,architect,51-75
-77,1,other,service mesh,full stack,science & tech,lead developer,76-100
-78,1,other,containerization,full stack,science & tech,senior developer,1-25
-79,1,eclipse che,service mesh,devops,other,architect,51-75
-8,1,other,container orchestration,devops,finance,architect,none
-80,1,vs code,container orchestration,full stack,government,manager,76-100
-80,2,NA,containerization,NA,NA,manager,76-100
-81,1,eclipse che,devops,devops,other,manager (senior),76-100
-81,2,NA,NA,full stack,NA,manager (senior),76-100
-82,1,emacs,container orchestration,devops,other,manager,76-100
-83,1,eclipse,container orchestration,mobile,government,manager,none
-83,2,NA,devops,security,NA,manager,none
-83,3,NA,microservices,devops,NA,manager,none
-83,4,NA,NA,full stack,NA,manager,none
-83,5,NA,NA,back end,NA,manager,none
-84,1,vs code,serverless,devops,science & tech,manager,1-25
-84,2,NA,NA,back end,NA,manager,1-25
-85,1,other,containerization,full stack,science & tech,senior developer,1-25
-86,1,other,containerization,devops,government,senior developer,none
-87,1,eclipse,container orchestration,full stack,retail & services,architect,76-100
-87,2,NA,microservices,NA,NA,architect,76-100
-87,3,NA,service mesh,NA,NA,architect,76-100
-88,1,vs code,serverless,full stack,government,architect,76-100
-89,1,other,devops,devops,science & tech,architect,1-25
-9,1,eclipse che,devops,back end,government,architect,none
-90,1,vs code,devops,back end,other,manager,none
-90,2,NA,containerization,NA,NA,manager,none
-90,3,NA,container orchestration,NA,NA,manager,none
-90,4,NA,serverless,NA,NA,manager,none
-91,1,other,containerization,front end,science & tech,manager,1-25
-92,1,other,container orchestration,security,finance,architect,26-50
-92,2,NA,devops,NA,retail & services,architect,26-50
-92,3,NA,NA,NA,other,architect,26-50
-93,1,other,container orchestration,devops,other,junior developer,76-100
-93,2,NA,containerization,NA,government,junior developer,76-100
-93,3,NA,devops,NA,NA,junior developer,76-100
-93,4,NA,microservices,NA,NA,junior developer,76-100
-94,1,other,container orchestration,back end,finance,manager,none
-94,2,eclipse che,containerization,full stack,NA,manager,none
-94,3,eclipse,NA,security,NA,manager,none
-94,4,NA,NA,devops,NA,manager,none
-95,1,eclipse,containerization,full stack,other,architect,76-100
-95,2,atom,NA,NA,NA,architect,76-100
-95,3,vs code,NA,NA,NA,architect,76-100
-95,4,eclipse che,NA,NA,NA,architect,76-100
-96,1,vs code,container orchestration,back end,science & tech,senior developer,76-100
-96,2,NA,devops,NA,NA,senior developer,76-100
-97,1,other,container orchestration,full stack,retail & services,senior developer,1-25
-97,2,NA,containerization,NA,NA,senior developer,1-25
-98,1,other,devops,full stack,science & tech,manager,76-100
+id,response_number,code.editor,learn,specialize,work,containers,place,role
+1,1,vs code,service mesh,security,science & technology,76-100,Summit,manager
+1,2,NA,NA,devops,manufacturing,76-100,Summit,manager
+1,3,NA,NA,full stack,other,76-100,Summit,manager
+1,4,NA,NA,NA,NA,76-100,Summit,manager
+10,1,eclipse,containerization,security,government,none,Summit,architect
+10,2,vs code,NA,devops,NA,none,Summit,architect
+100,1,atom,containerization,back end,science & technology,none,DevConf.US,junior developer
+101,1,other,serverless,front end,other,none,DevConf.US,mid-level developer
+102,1,eclipse,containerization,security,science & technology,26-50,DevConf.US,manager
+102,2,NA,devops,devops,government,26-50,DevConf.US,manager
+103,1,vs code,serverless,back end,science & technology,26-50,DevConf.US,junior developer
+104,1,emacs,container orchestration,full stack,science & technology,26-50,DevConf.US,manager
+105,1,other,NA,mobile,science & technology,51-75,DevConf.US,architect
+105,2,NA,NA,security,manufacturing,51-75,DevConf.US,architect
+105,3,NA,NA,devops,other,51-75,DevConf.US,architect
+105,4,NA,NA,full stack,NA,51-75,DevConf.US,architect
+105,5,NA,NA,back end,NA,51-75,DevConf.US,architect
+106,1,atom,serverless,full stack,finance,1-25,DevConf.US,architect
+106,2,NA,containerization,NA,NA,1-25,DevConf.US,architect
+106,3,NA,devops,NA,NA,1-25,DevConf.US,architect
+106,4,NA,microservices,NA,NA,1-25,DevConf.US,architect
+106,5,NA,service mesh,NA,NA,1-25,DevConf.US,architect
+107,1,other,devops,security,finance,none,DevConf.US,junior developer
+108,1,other,NA,full stack,science & technology,26-50,DevConf.US,senior developer
+109,1,other,devops,back end,science & technology,none,DevConf.US,junior developer
+11,1,eclipse che,serverless,mobile,science & technology,1-25,Summit,architect
+11,2,intellij,service mesh,devops,government,1-25,Summit,architect
+110,1,other,service mesh,front end,science & technology,51-75,DevConf.US,junior developer
+110,2,NA,serverless,back end,NA,51-75,DevConf.US,junior developer
+111,1,vs code,container orchestration,back end,science & technology,1-25,DevConf.US,junior developer
+111,2,emacs,containerization,NA,NA,1-25,DevConf.US,junior developer
+111,3,NA,devops,NA,NA,1-25,DevConf.US,junior developer
+111,4,NA,microservices,NA,NA,1-25,DevConf.US,junior developer
+112,1,other,serverless,back end,science & technology,26-50,DevConf.US,junior developer
+112,2,vs code,devops,NA,NA,26-50,DevConf.US,junior developer
+113,1,other,containerization,devops,science & technology,1-25,DevConf.US,junior developer
+114,1,other,container orchestration,back end,science & technology,none,DevConf.US,junior developer
+114,2,NA,containerization,NA,NA,none,DevConf.US,junior developer
+114,3,NA,devops,NA,NA,none,DevConf.US,junior developer
+115,1,other,NA,security,science & technology,1-25,DevConf.US,lead developer
+115,2,eclipse,NA,NA,NA,1-25,DevConf.US,lead developer
+115,3,vs code,NA,NA,NA,1-25,DevConf.US,lead developer
+115,4,eclipse che,NA,NA,NA,1-25,DevConf.US,lead developer
+116,1,eclipse che,serverless,security,finance,none,DevConf.US,architect
+116,2,emacs,devops,NA,science & technology,none,DevConf.US,architect
+116,3,NA,microservices,NA,government,none,DevConf.US,architect
+116,4,NA,service mesh,NA,manufacturing,none,DevConf.US,architect
+116,5,NA,NA,NA,retail & services,none,DevConf.US,architect
+117,1,intellij,microservices,full stack,science & technology,none,DevConf.US,mid-level developer
+117,2,NA,NA,back end,NA,none,DevConf.US,mid-level developer
+118,1,eclipse,service mesh,security,other,none,DevConf.US,mid-level developer
+118,2,NA,microservices,NA,NA,none,DevConf.US,mid-level developer
+118,3,NA,devops,NA,NA,none,DevConf.US,mid-level developer
+118,4,NA,containerization,NA,NA,none,DevConf.US,mid-level developer
+118,5,NA,container orchestration,NA,NA,none,DevConf.US,mid-level developer
+119,1,other,serverless,devops,science & technology,76-100,DevConf.US,senior developer
+119,2,NA,containerization,NA,NA,76-100,DevConf.US,senior developer
+119,3,NA,devops,NA,NA,76-100,DevConf.US,senior developer
+119,4,NA,microservices,NA,NA,76-100,DevConf.US,senior developer
+12,1,eclipse,container orchestration,back end,other,26-50,Summit,architect
+12,2,NA,devops,NA,NA,26-50,Summit,architect
+12,3,NA,service mesh,NA,NA,26-50,Summit,architect
+12,4,NA,microservices,NA,NA,26-50,Summit,architect
+120,1,other,serverless,full stack,science & technology,none,DevConf.US,mid-level developer
+120,2,emacs,containerization,NA,NA,none,DevConf.US,mid-level developer
+120,3,NA,microservices,NA,NA,none,DevConf.US,mid-level developer
+120,4,NA,service mesh,NA,NA,none,DevConf.US,mid-level developer
+121,1,other,container orchestration,devops,science & technology,1-25,DevConf.US,junior developer
+121,2,NA,microservices,NA,NA,1-25,DevConf.US,junior developer
+122,1,vs code,microservices,back end,science & technology,1-25,DevConf.US,junior developer
+123,1,vs code,serverless,devops,science & technology,76-100,DevConf.US,architect
+123,2,NA,container orchestration,full stack,NA,76-100,DevConf.US,architect
+123,3,NA,devops,NA,NA,76-100,DevConf.US,architect
+123,4,NA,service mesh,NA,NA,76-100,DevConf.US,architect
+124,1,intellij,service mesh,full stack,other,76-100,DevConf.US,manager
+124,2,NA,serverless,NA,NA,76-100,DevConf.US,manager
+125,1,vs code,container orchestration,front end,science & technology,none,DevConf.US,junior developer
+126,1,intellij,microservices,front end,retail & services,1-25,DevConf.US,junior developer
+126,2,atom,NA,NA,NA,1-25,DevConf.US,junior developer
+126,3,vs code,NA,NA,NA,1-25,DevConf.US,junior developer
+127,1,eclipse,container orchestration,devops,science & technology,1-25,DevConf.US,manager
+128,1,other,containerization,back end,science & technology,1-25,DevConf.US,mid-level developer
+128,2,intellij,NA,NA,NA,1-25,DevConf.US,mid-level developer
+129,1,intellij,microservices,back end,retail & services,none,DevConf.US,senior developer
+129,2,eclipse che,devops,NA,NA,none,DevConf.US,senior developer
+13,1,vs code,service mesh,back end,science & technology,76-100,Summit,architect
+130,1,vs code,serverless,back end,science & technology,none,DevConf.US,junior developer
+130,2,NA,container orchestration,NA,NA,none,DevConf.US,junior developer
+130,3,NA,containerization,NA,NA,none,DevConf.US,junior developer
+130,4,NA,devops,NA,NA,none,DevConf.US,junior developer
+130,5,NA,microservices,NA,NA,none,DevConf.US,junior developer
+131,1,vs code,containerization,front end,science & technology,1-25,DevConf.US,junior developer
+132,1,other,serverless,back end,science & technology,76-100,DevConf.US,senior developer
+132,2,vs code,container orchestration,NA,NA,76-100,DevConf.US,senior developer
+132,3,NA,containerization,NA,NA,76-100,DevConf.US,senior developer
+132,4,NA,devops,NA,NA,76-100,DevConf.US,senior developer
+132,5,NA,microservices,NA,NA,76-100,DevConf.US,senior developer
+133,1,eclipse,containerization,back end,science & technology,1-25,DevConf.US,junior developer
+133,2,vs code,microservices,NA,NA,1-25,DevConf.US,junior developer
+134,1,other,microservices,back end,science & technology,76-100,DevConf.US,senior developer
+135,1,vs code,microservices,full stack,science & technology,51-75,DevConf.US,senior developer
+136,1,emacs,container orchestration,mobile,science & technology,1-25,DevConf.US,architect
+137,1,eclipse,devops,mobile,science & technology,none,DevConf.US,junior developer
+137,2,NA,NA,devops,NA,none,DevConf.US,junior developer
+138,1,intellij,containerization,back end,science & technology,76-100,DevConf.US,senior developer
+138,2,NA,devops,NA,NA,76-100,DevConf.US,senior developer
+138,3,NA,microservices,NA,NA,76-100,DevConf.US,senior developer
+139,1,other,container orchestration,back end,science & technology,none,DevConf.US,architect
+14,1,atom,serverless,devops,science & technology,76-100,Summit,architect
+14,2,vs code,container orchestration,NA,NA,76-100,Summit,architect
+14,3,NA,devops,NA,NA,76-100,Summit,architect
+14,4,NA,microservices,NA,NA,76-100,Summit,architect
+14,5,NA,service mesh,NA,NA,76-100,Summit,architect
+140,1,vs code,microservices,full stack,science & technology,76-100,DevConf.US,junior developer
+141,1,intellij,serverless,front end,other,76-100,DevConf.US,mid-level developer
+141,2,NA,NA,back end,NA,76-100,DevConf.US,mid-level developer
+142,1,vs code,serverless,devops,science & technology,76-100,DevConf.US,junior developer
+142,2,NA,container orchestration,NA,NA,76-100,DevConf.US,junior developer
+143,1,vs code,containerization,front end,science & technology,none,DevConf.US,junior developer
+144,1,vs code,containerization,front end,science & technology,none,DevConf.US,junior developer
+145,1,vs code,containerization,full stack,science & technology,none,DevConf.US,lead developer
+146,1,other,NA,NA,science & technology,none,DevConf.US,junior developer
+147,1,other,containerization,back end,science & technology,1-25,DevConf.US,mid-level developer
+147,2,intellij,NA,NA,NA,1-25,DevConf.US,mid-level developer
+148,1,emacs,container orchestration,back end,other,none,DevConf.US,senior developer
+149,1,other,serverless,back end,science & technology,1-25,DevConf.US,senior developer
+149,2,vs code,container orchestration,NA,NA,1-25,DevConf.US,senior developer
+149,3,NA,containerization,NA,NA,1-25,DevConf.US,senior developer
+149,4,NA,service mesh,NA,NA,1-25,DevConf.US,senior developer
+15,1,vs code,service mesh,full stack,science & technology,1-25,Summit,architect
+15,2,eclipse,container orchestration,NA,NA,1-25,Summit,architect
+15,3,emacs,NA,NA,NA,1-25,Summit,architect
+150,1,intellij,devops,back end,science & technology,none,DevConf.US,junior developer
+151,1,other,container orchestration,back end,science & technology,26-50,DevConf.US,lead developer
+152,1,emacs,service mesh,back end,science & technology,1-25,DevConf.US,junior developer
+152,2,vs code,NA,NA,NA,1-25,DevConf.US,junior developer
+153,1,other,container orchestration,full stack,science & technology,76-100,DevConf.US,mid-level developer
+154,1,other,containerization,NA,retail & services,none,DevConf.US,lead developer
+155,1,intellij,containerization,back end,science & technology,none,DevConf.US,junior developer
+155,2,emacs,NA,NA,NA,none,DevConf.US,junior developer
+156,1,atom,containerization,back end,science & technology,none,DevConf.US,junior developer
+157,1,emacs,devops,back end,science & technology,none,DevConf.US,junior developer
+158,1,vs code,service mesh,devops,science & technology,51-75,DevConf.US,mid-level developer
+159,1,vs code,serverless,back end,other,none,DevConf.US,mid-level developer
+159,2,atom,devops,front end,science & technology,none,DevConf.US,mid-level developer
+16,1,eclipse,microservices,back end,retail & services,1-25,Summit,architect
+160,1,other,devops,back end,science & technology,1-25,DevConf.US,mid-level developer
+161,1,emacs,serverless,full stack,science & technology,1-25,DevConf.US,lead developer
+162,1,vs code,serverless,front end,other,none,DevConf.US,mid-level developer
+163,1,vs code,microservices,front end,science & technology,1-25,DevConf.US,mid-level developer
+164,1,other,devops,back end,science & technology,1-25,DevConf.US,senior developer
+165,1,vs code,containerization,full stack,science & technology,none,DevConf.US,mid-level developer
+166,1,other,container orchestration,devops,science & technology,51-75,DevConf.US,senior developer
+166,2,NA,devops,back end,NA,51-75,DevConf.US,senior developer
+167,1,other,container orchestration,devops,science & technology,26-50,DevConf.US,senior developer
+167,2,NA,containerization,back end,NA,26-50,DevConf.US,senior developer
+167,3,NA,devops,NA,NA,26-50,DevConf.US,senior developer
+168,1,other,container orchestration,devops,science & technology,26-50,DevConf.US,senior developer
+168,2,NA,containerization,back end,NA,26-50,DevConf.US,senior developer
+168,3,NA,devops,NA,NA,26-50,DevConf.US,senior developer
+169,1,atom,serverless,devops,science & technology,51-75,DevConf.US,junior developer
+169,2,NA,container orchestration,back end,NA,51-75,DevConf.US,junior developer
+169,3,NA,containerization,NA,NA,51-75,DevConf.US,junior developer
+169,4,NA,devops,NA,NA,51-75,DevConf.US,junior developer
+169,5,NA,microservices,NA,NA,51-75,DevConf.US,junior developer
+17,1,vs code,microservices,back end,retail & services,1-25,Summit,architect
+170,1,vs code,microservices,back end,retail & services,1-25,DevConf.US,junior developer
+171,1,other,containerization,back end,science & technology,none,DevConf.US,senior developer
+172,1,atom,devops,front end,science & technology,none,DevConf.US,architect
+173,1,eclipse che,serverless,back end,science & technology,none,DevConf.US,architect
+173,2,NA,devops,NA,NA,none,DevConf.US,architect
+18,1,other,containerization,full stack,science & technology,1-25,Summit,mid-level developer
+18,2,NA,service mesh,NA,NA,1-25,Summit,mid-level developer
+19,1,other,service mesh,full stack,science & technology,1-25,Summit,architect
+19,2,NA,serverless,NA,NA,1-25,Summit,architect
+2,1,other,serverless,devops,other,none,Summit,senior developer
+2,2,NA,container orchestration,back end,NA,none,Summit,senior developer
+2,3,NA,devops,NA,NA,none,Summit,senior developer
+2,4,NA,microservices,NA,NA,none,Summit,senior developer
+2,5,NA,service mesh,NA,NA,none,Summit,senior developer
+20,1,other,containerization,devops,government,none,Summit,lead developer
+20,2,NA,service mesh,NA,NA,none,Summit,lead developer
+21,1,vs code,devops,back end,government,none,Summit,lead developer
+21,2,eclipse,NA,NA,NA,none,Summit,lead developer
+22,1,other,serverless,full stack,science & technology,76-100,Summit,architect
+22,2,NA,container orchestration,NA,NA,76-100,Summit,architect
+22,3,NA,devops,NA,NA,76-100,Summit,architect
+22,4,NA,microservices,NA,NA,76-100,Summit,architect
+22,5,NA,service mesh,NA,NA,76-100,Summit,architect
+23,1,vs code,serverless,back end,other,26-50,Summit,manager
+24,1,vs code,service mesh,devops,other,76-100,Summit,architect
+25,1,other,container orchestration,front end,manufacturing,1-25,Summit,architect
+25,2,vs code,devops,back end,NA,1-25,Summit,architect
+25,3,NA,microservices,full stack,NA,1-25,Summit,architect
+25,4,NA,NA,devops,NA,1-25,Summit,architect
+26,1,eclipse,microservices,full stack,government,26-50,Summit,architect
+27,1,vs code,devops,back end,manufacturing,76-100,Summit,senior developer
+28,1,eclipse,serverless,devops,finance,26-50,Summit,manager
+28,2,NA,container orchestration,NA,NA,26-50,Summit,manager
+29,1,other,containerization,full stack,government,none,Summit,junior developer
+3,1,other,service mesh,security,government,51-75,Summit,mid-level developer
+30,1,atom,service mesh,back end,government,76-100,Summit,architect
+31,1,eclipse,service mesh,full stack,government,76-100,Summit,manager
+31,2,NA,serverless,NA,NA,76-100,Summit,manager
+32,1,eclipse,microservices,full stack,finance,26-50,Summit,lead developer
+33,1,other,devops,back end,other,none,Summit,mid-level developer
+34,1,other,devops,full stack,science & technology,76-100,Summit,architect
+35,1,vs code,service mesh,back end,retail & services,26-50,Summit,manager
+36,1,vs code,service mesh,back end,other,51-75,Summit,architect
+37,1,vs code,service mesh,back end,other,51-75,Summit,lead developer
+38,1,other,devops,back end,science & technology,none,Summit,lead developer
+39,1,atom,service mesh,devops,science & technology,76-100,Summit,architect
+4,1,atom,containerization,devops,science & technology,1-25,Summit,mid-level developer
+40,1,vs code,container orchestration,front end,other,none,Summit,architect
+40,2,atom,containerization,NA,NA,none,Summit,architect
+41,1,other,serverless,devops,finance,none,Summit,junior developer
+41,2,vs code,service mesh,NA,NA,none,Summit,junior developer
+42,1,eclipse,container orchestration,full stack,finance,26-50,Summit,architect
+42,2,NA,containerization,NA,NA,26-50,Summit,architect
+42,3,NA,microservices,NA,NA,26-50,Summit,architect
+43,1,other,containerization,full stack,finance,1-25,Summit,mid-level developer
+44,1,other,service mesh,devops,other,none,Summit,senior developer
+44,2,NA,containerization,NA,NA,none,Summit,senior developer
+44,3,NA,devops,NA,NA,none,Summit,senior developer
+44,4,NA,container orchestration,NA,NA,none,Summit,senior developer
+44,5,NA,serverless,NA,NA,none,Summit,senior developer
+45,1,eclipse,containerization,full stack,other,1-25,Summit,manager
+46,1,vs code,serverless,full stack,retail & services,none,Summit,architect
+46,2,eclipse,NA,NA,NA,none,Summit,architect
+47,1,other,devops,full stack,other,none,Summit,mid-level developer
+48,1,vs code,service mesh,full stack,finance,26-50,Summit,architect
+48,2,NA,devops,NA,NA,26-50,Summit,architect
+48,3,NA,containerization,NA,NA,26-50,Summit,architect
+48,4,NA,container orchestration,NA,NA,26-50,Summit,architect
+48,5,NA,serverless,NA,NA,26-50,Summit,architect
+49,1,other,serverless,devops,other,none,Summit,mid-level developer
+49,2,NA,container orchestration,full stack,retail & services,none,Summit,mid-level developer
+49,3,NA,containerization,back end,manufacturing,none,Summit,mid-level developer
+49,4,NA,devops,front end,science & technology,none,Summit,mid-level developer
+49,5,NA,microservices,NA,security,none,Summit,mid-level developer
+5,1,other,service mesh,full stack,science & technology,76-100,Summit,mid-level developer
+50,1,intellij,container orchestration,full stack,science & technology,1-25,Summit,mid-level developer
+50,2,NA,microservices,NA,NA,1-25,Summit,mid-level developer
+51,1,emacs,service mesh,security,other,none,Summit,architect
+52,1,eclipse che,service mesh,full stack,government,1-25,Summit,architect
+53,1,other,container orchestration,back end,science & technology,51-75,Summit,lead developer
+53,2,NA,service mesh,security,NA,51-75,Summit,lead developer
+54,1,other,service mesh,full stack,science & technology,1-25,Summit,lead developer
+55,1,other,container orchestration,devops,other,1-25,Summit,lead developer
+55,2,NA,containerization,NA,NA,1-25,Summit,lead developer
+56,1,other,devops,devops,other,1-25,Summit,architect
+56,2,atom,NA,full stack,finance,1-25,Summit,architect
+57,1,eclipse che,serverless,devops,finance,76-100,Summit,senior developer
+57,2,intellij,container orchestration,full stack,NA,76-100,Summit,senior developer
+57,3,NA,containerization,back end,NA,76-100,Summit,senior developer
+57,4,NA,microservices,front end,NA,76-100,Summit,senior developer
+58,1,intellij,microservices,full stack,science & technology,76-100,Summit,senior developer
+59,1,vs code,microservices,front end,science & technology,51-75,Summit,mid-level developer
+6,1,other,devops,security,government,1-25,Summit,lead developer
+6,2,NA,NA,front end,NA,1-25,Summit,lead developer
+60,1,eclipse,container orchestration,full stack,science & technology,76-100,Summit,junior developer
+60,2,atom,containerization,devops,NA,76-100,Summit,junior developer
+60,3,NA,devops,NA,NA,76-100,Summit,junior developer
+60,4,NA,microservices,NA,NA,76-100,Summit,junior developer
+61,1,emacs,containerization,full stack,finance,1-25,Summit,architect
+61,2,NA,service mesh,devops,other,1-25,Summit,architect
+62,1,eclipse,serverless,full stack,science & technology,1-25,Summit,mid-level developer
+62,2,intellij,devops,NA,NA,1-25,Summit,mid-level developer
+62,3,NA,microservices,NA,NA,1-25,Summit,mid-level developer
+62,4,NA,service mesh,NA,NA,1-25,Summit,mid-level developer
+63,1,vs code,microservices,full stack,government,1-25,Summit,manager
+63,2,NA,serverless,devops,NA,1-25,Summit,manager
+63,3,NA,NA,security,NA,1-25,Summit,manager
+64,1,eclipse che,containerization,back end,science & technology,1-25,Summit,mid-level developer
+64,2,NA,service mesh,NA,NA,1-25,Summit,mid-level developer
+65,1,other,containerization,full stack,finance,1-25,Summit,architect
+66,1,eclipse,service mesh,full stack,science & technology,1-25,Summit,architect
+67,1,intellij,microservices,back end,finance,1-25,Summit,senior developer
+68,1,intellij,microservices,back end,finance,76-100,Summit,architect
+69,1,atom,microservices,full stack,science & technology,76-100,Summit,manager
+7,1,eclipse che,serverless,full stack,science & technology,1-25,Summit,lead developer
+70,1,intellij,devops,back end,other,51-75,Summit,mid-level developer
+71,1,eclipse,serverless,full stack,government,51-75,Summit,architect
+72,1,atom,service mesh,front end,manufacturing,51-75,Summit,manager
+73,1,other,devops,devops,other,76-100,Summit,architect
+74,1,eclipse che,serverless,full stack,other,76-100,Summit,architect
+75,1,other,serverless,full stack,science & technology,76-100,Summit,manager
+75,2,intellij,service mesh,NA,NA,76-100,Summit,manager
+75,3,eclipse,microservices,NA,NA,76-100,Summit,manager
+76,1,vs code,serverless,full stack,science & technology,51-75,Summit,architect
+76,2,NA,microservices,NA,NA,51-75,Summit,architect
+76,3,NA,service mesh,NA,NA,51-75,Summit,architect
+77,1,other,service mesh,full stack,science & technology,76-100,Summit,lead developer
+78,1,other,containerization,full stack,science & technology,1-25,Summit,senior developer
+79,1,eclipse che,service mesh,devops,other,51-75,Summit,architect
+8,1,other,container orchestration,devops,finance,none,Summit,architect
+80,1,vs code,container orchestration,full stack,government,76-100,Summit,manager
+80,2,NA,containerization,NA,NA,76-100,Summit,manager
+81,1,eclipse che,devops,devops,other,76-100,Summit,manager
+81,2,NA,NA,full stack,NA,76-100,Summit,manager
+82,1,emacs,container orchestration,devops,other,76-100,Summit,manager
+83,1,eclipse,container orchestration,mobile,government,none,Summit,manager
+83,2,NA,devops,security,NA,none,Summit,manager
+83,3,NA,microservices,devops,NA,none,Summit,manager
+83,4,NA,NA,full stack,NA,none,Summit,manager
+83,5,NA,NA,back end,NA,none,Summit,manager
+84,1,vs code,serverless,devops,science & technology,1-25,Summit,manager
+84,2,NA,NA,back end,NA,1-25,Summit,manager
+85,1,other,containerization,full stack,science & technology,1-25,Summit,senior developer
+86,1,other,containerization,devops,government,none,Summit,senior developer
+87,1,eclipse,container orchestration,full stack,retail & services,76-100,Summit,architect
+87,2,NA,microservices,NA,NA,76-100,Summit,architect
+87,3,NA,service mesh,NA,NA,76-100,Summit,architect
+88,1,vs code,serverless,full stack,government,76-100,Summit,architect
+89,1,other,devops,devops,science & technology,1-25,Summit,architect
+9,1,eclipse che,devops,back end,government,none,Summit,architect
+90,1,vs code,devops,back end,other,none,Summit,manager
+90,2,NA,containerization,NA,NA,none,Summit,manager
+90,3,NA,container orchestration,NA,NA,none,Summit,manager
+90,4,NA,serverless,NA,NA,none,Summit,manager
+91,1,other,containerization,front end,science & technology,1-25,Summit,manager
+92,1,other,container orchestration,security,finance,26-50,Summit,architect
+92,2,NA,devops,NA,retail & services,26-50,Summit,architect
+92,3,NA,NA,NA,other,26-50,Summit,architect
+93,1,other,container orchestration,devops,other,76-100,Summit,junior developer
+93,2,NA,containerization,NA,government,76-100,Summit,junior developer
+93,3,NA,devops,NA,NA,76-100,Summit,junior developer
+93,4,NA,microservices,NA,NA,76-100,Summit,junior developer
+94,1,other,container orchestration,back end,finance,none,Summit,manager
+94,2,eclipse che,containerization,full stack,NA,none,Summit,manager
+94,3,eclipse,NA,security,NA,none,Summit,manager
+94,4,NA,NA,devops,NA,none,Summit,manager
+95,1,eclipse,containerization,full stack,other,76-100,Summit,architect
+95,2,atom,NA,NA,NA,76-100,Summit,architect
+95,3,vs code,NA,NA,NA,76-100,Summit,architect
+95,4,eclipse che,NA,NA,NA,76-100,Summit,architect
+96,1,vs code,container orchestration,back end,science & technology,76-100,Summit,senior developer
+96,2,NA,devops,NA,NA,76-100,Summit,senior developer
+97,1,other,container orchestration,full stack,retail & services,1-25,Summit,senior developer
+97,2,NA,containerization,NA,NA,1-25,Summit,senior developer
+98,1,other,devops,full stack,science & technology,76-100,Summit,manager
+99,1,other,container orchestration,devops,science & technology,none,DevConf.US,junior developer
